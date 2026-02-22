@@ -1,0 +1,26 @@
+.body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.pic {
+    height: 350px;
+    margin: 50px 25px 100px 20px;
+    border-radius: 20px;
+}
+
+.table {
+    margin: 0 auto;
+    border: dashed;
+}
+
+.table {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.color {
+    color: #2d56fc;
+}
