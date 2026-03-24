@@ -1,0 +1,22 @@
+.container {
+    font-family: italic;
+    background-color: lightseagreen;
+}
+
+body {
+    background-color: lightseagreen;
+}
+
+.container {
+    width: 300px;
+    height: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: lightblue;
+    border: 1px solid gray;
+}
+
+input {
+    width: auto;
+    padding: 5px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Text Analyzer</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial;
+            text-align: center;
+        }
+        
+        .container {
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        
+        textarea {
+            width: 80%;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Text Analyzer</h2>
+
+        <textarea id="textInput"></textarea>
+        <br>
+        <button onclick="analyzeText()">Analyze Text</button>
+        <div class="result" id="output"></div>
+    </div>
+
+    <script>
+        function analyzeText() {
+            let text = document.getElementById("textInput").value;
+            if (text.trim() === "") {
+                document.getElementById("output").innerHTML = "Please enter some text!";
+                return;
+            }
+            let charCount = text.length;
+            let words = text.trim().split(/\s+/);
+            let wordCount = words.length;
+            let reversed = text.split("").reverse().join("");
+
+            document.getElementById("output").innerHTML =
+                "<p><b>Total Characters:</b> " + charCount + "</p>" +
+                "<p><b>Total Words:</b> " + wordCount + "</p>" +
+                "<p><b>Reversed Text:</b> " + reversed + "</p>";
+        }
+    </script>
+
+</body>
+
+</html>
